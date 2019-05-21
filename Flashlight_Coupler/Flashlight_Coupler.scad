@@ -72,7 +72,7 @@ module flashlight_coupler(  Length=23.5,    //overall length
            {
                rotate([0,0,a])
                translate([r1,0,0])
-               cylinder(r=(OD-Thread_Dia)/4,h=Length);
+               cylinder(r=(OD-Thread_Dia)/4,h=Length-Thread_Len+eps);
            }
        }
     }
