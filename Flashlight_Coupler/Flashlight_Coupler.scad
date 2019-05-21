@@ -61,11 +61,12 @@ module flashlight_coupler(  Length=23.5,    //overall length
             translate([0,0,Thread_Len-eps])     cylinder(r=r1, h=2*eps+Length-2*Thread_Len,$fn=num_sides);
             translate([0,0,Length-Thread_Len])  
             trapezoidal_threaded_rod(d=Thread_Dia, l=Thread_Len, pitch=Thread_Pitch,
-                                     thread_depth=Thread_Depth, thread_angle=15, $fn=32);
+                                     thread_depth=Thread_Depth, thread_angle=15, center=false, $fn=32);
            }
             translate([0,0,-eps])
             cylinder(r=r2, h=Length+2*eps, $fn=smooth); //bore the inside out smooth
-            trapezoidal_threaded_rod(d=Thread_Dia, l=Thread_Len+eps, pitch=Thread_Pitch,
+            translate([0,0,-eps])
+            trapezoidal_threaded_rod(d=Thread_Dia, l=Thread_Len+eps, pitch=Thread_Pitch, center=false,
                                      thread_depth=Thread_Depth, thread_angle=15, internal=true, $fn=32);
        }
     }
