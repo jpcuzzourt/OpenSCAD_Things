@@ -21,12 +21,12 @@
 ** other purposes. 
 ** V1.0
 ** Uses the excellent BOSL library for creating the threads
-** (Which means it won't work in Customizer, but just get the development version of OpenSCAD)
+** (Which means it won't work in Customizer, but just get the latest version of OpenSCAD)
 */
 
 /*[sizing]*/
-Length   = 23.5; //overall length of coupler
-OD       = 28.3; //Outside diameter of non-threaded section
+Length   = 20.0; //overall length of coupler
+OD       = 29.0; //Outside diameter of non-threaded section
 ID       = 22.7; //Inside diameter of coupler
 num_sides= 9;    //Number of sides
 
